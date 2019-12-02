@@ -12,7 +12,7 @@ In-App Features:
 - Shutdown & reboot device*
 - Control immersive mode**
 
-*(Needs ROOT permission)
+* (Needs ROOT permission)
 
 ** (Needs WRITE_SECURE_SETTINGS permission)
 
