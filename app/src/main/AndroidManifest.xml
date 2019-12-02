@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="diorid.tiles"
+    android:installLocation="internalOnly">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".screenshot.App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="QS-Tiles"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".screenshot.NoDisplayActivity"
+            android:autoRemoveFromRecents="true"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name=".screenshot.CheckScreenshotPermission"
+            android:autoRemoveFromRecents="true"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity
+            android:name=".screenshot.TakeScreenshotActivity"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppTheme.Transparent" />
+
+        <service
+            android:name=".SoundProfileTileService"
+            android:icon="@drawable/ic_volume_up_white_24dp"
+            android:label="Sound"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RearFlashTileService"
+            android:icon="@drawable/ic_camera_rear_black_24dp"
+            android:label="Rear flash"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FrontFlashTileService"
+            android:icon="@drawable/ic_camera_front_black_24dp"
+            android:label="Front flash"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".AssistTileService"
+            android:icon="@drawable/baseline_bubble_chart_24px"
+            android:label="Assistant"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".SoundSearchTileService"
+            android:icon="@drawable/baseline_music_note_24px"
+            android:label="Sound search"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".NotificationHistoryTileService"
+            android:icon="@drawable/baseline_history_24px"
+            android:label="Notification history"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".screenshot.ScreenshotTileService"
+            android:icon="@drawable/ic_screenshot"
+            android:label="Take screenshot"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ImmersiveTileService"
+            android:icon="@drawable/baseline_crop_free_24px"
+            android:label="Immersive mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ShutdownTileService"
+            android:icon="@drawable/ic_shutdown"
+            android:label="Shutdown"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RebootTileService"
+            android:icon="@drawable/ic_reboot"
+            android:label="Reboot"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

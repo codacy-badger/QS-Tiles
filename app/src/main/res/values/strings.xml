@@ -1,0 +1,21 @@
+<resources>
+    <string name="file_title">Screenshot</string>
+    <string name="file_description">Screenshot taken on %1$s</string>
+    <string name="file_description_simple_date_format">yyyy/MM/dd HH:mm:ss</string>
+    <string name="notification_title">Screenshot taken</string>
+    <string name="notification_body">Tap to see the image</string>
+    <string name="notification_channel_description">Shows a notification when you have taken a screenshot</string>
+    <string name="notification_app_chooser">Open file with…</string>
+    <string name="notification_app_chooser_share">Share file with…</string>
+    <string name="notification_app_chooser_edit">Edit file with…</string>
+    <string name="screenshot_failed">Failed to take screenshot, please try again</string>
+    <string name="screenshot_file_saved">Screenshot saved %1$s</string>
+    <string name="notification_delete_screenshot">Delete</string>
+    <string name="notification_share_screenshot">Share</string>
+    <string name="notification_edit_screenshot">Edit</string>
+    <string name="screenshot_deleted">Screenshot deleted</string>
+    <string name="setting_file_format_value_default" translatable="false">png</string>
+    <string name="screenshot_delete_failed">Could not delete file</string>
+    <string name="permission_missing_external_storage">Failed to grant permission for storage</string>
+    <string name="permission_missing_screen_capture">Failed to grant permission to record screen capture</string>
+</resources>
