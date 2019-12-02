@@ -9,11 +9,12 @@ In-App Features:
 - Access to assistant and sound search
 - Access to notification history
 - Take, edit and share screenshot
-- Shutdown & reboot device**
-- Control immersive mode*
+- Shutdown & reboot device*
+- Control immersive mode**
 
-*(Needs WRITE_SECURE_SETTINGS permission)
-** (Needs ROOT permission)
+*(Needs ROOT permission)
+
+** (Needs WRITE_SECURE_SETTINGS permission)
 
 How to grant WRITE_SECURE_SETTINGS (Using ADB):
 - bit.ly/adbpermission
