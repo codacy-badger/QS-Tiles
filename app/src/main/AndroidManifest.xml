@@ -16,27 +16,38 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name=".screenshot.App"
+        android:name=".screenshot.Screenshot"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="QS-Tiles"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme.Transparent"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".screenshot.NoDisplayActivity"
-            android:autoRemoveFromRecents="true"
+            android:name=".screenshot.NonDisplayActivity"
+            android:excludeFromRecents="true"
             android:theme="@android:style/Theme.NoDisplay" />
         <activity
-            android:name=".screenshot.CheckScreenshotPermission"
-            android:autoRemoveFromRecents="true"
-            android:theme="@style/AppTheme.Transparent" />
+            android:name=".screenshot.TransparentContainerActivity"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name=".screenshot.LongClickTileActivity"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screenshot.AcquireScreenshotPermission"
+            android:excludeFromRecents="true" />
         <activity
             android:name=".screenshot.TakeScreenshotActivity"
             android:autoRemoveFromRecents="true"
             android:excludeFromRecents="true"
-            android:theme="@style/AppTheme.Transparent" />
-
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <service
             android:name=".SoundProfileTileService"
             android:icon="@drawable/ic_volume_up_white_24dp"
@@ -93,9 +104,11 @@
         </service>
         <service
             android:name=".screenshot.ScreenshotTileService"
+            android:foregroundServiceType="mediaProjection"
             android:icon="@drawable/ic_screenshot"
-            android:label="Take screenshot"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:label="@string/take_screenshot"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            tools:targetApi="q">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>

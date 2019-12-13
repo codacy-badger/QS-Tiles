@@ -18,4 +18,11 @@
     <string name="screenshot_delete_failed">Could not delete file</string>
     <string name="permission_missing_external_storage">Failed to grant permission for storage</string>
     <string name="permission_missing_screen_capture">Failed to grant permission to record screen capture</string>
+    <string name="file_format">File format</string>
+    <string name="notification_foreground_title">Taking a screenshot…</string>
+    <string name="notification_foreground_body">Processing screenshot… Tap to cancel</string>
+    <string name="notification_foreground_channel_description">Shows a notification when you are taking a screenshot. Prevents the app from being terminated by the battery optimization while a screenshot is in process</string>
+    <string name="take_screenshot">Take a screenshot</string>
+
+
 </resources>
