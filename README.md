@@ -5,14 +5,16 @@ QS-Tiles, helps you to control your device easily with custom quick tiles.
 In-App Features:
 
 - Toggle rear flash
-- Toggle front flash (If your device supports)
+- Toggle front flash
 - Change between sound modes
 - Access to assistant and sound search
 - Access to notification history
-- Take, edit and share screenshot
-you can also take partial screenshot on long click to Screenshot Tile!
 - Shutdown & reboot device*
 - Control immersive mode**
+- Take, edit and share screenshot
+
+you can also take partial screenshot on long click to Screenshot Tile!
+
 
 
 *(Needs ROOT permission)
